@@ -2,11 +2,11 @@ const express = require('express');
 const router = express.Router();
 const {User,Blog} = require('../models');
 
+//TODO: Getting all the blogs
 router.get("/",(req,res)=>{
     Blog.findAll().then(blogs=>{
         const blogHandBsData = blogs.map(blog=>blog.get({plain:true}))
         console.log(blogs);
-        console.log("==============")
         console.log(blogHandBsData)
 
         res.render("home",{
@@ -16,22 +16,24 @@ router.get("/",(req,res)=>{
     })
 })
 
+//TODO: Getting current session
 router.get("/sessions",(req,res)=>{
     res.json(req.session)
 })
+
+//Getting Blog data by Id
 router.get("/blog/:id",(req,res)=>{
     Blog.findByPk(req.params.id,{
         include:[User]
     }).then(blog=>{
         const blogHandBsData = blog.get({plain:true});
         console.log(blog);
-        console.log("==============")
-        console.log(blogersData)
+        console.log(blogHandBsData)
         blogHandBsData.logged_in=req.session.logged_in
-        res.render("blog-details",blogHandBsData)
+        res.render("blog-deets",blogHandBsData)
     })
 })
-
+//TODO: This redirects you where?
 router.get("/login",(req,res)=>{
     if(req.session.logged_in){
         return res.redirect("/home")
@@ -39,6 +41,7 @@ router.get("/login",(req,res)=>{
     res.render("login")
 })
 
+//TODO: redirect user where if logged in? setting the session login data to handlebar login data
 router.get("/home",(req,res)=>{
     if(!req.session.logged_in){
         return res.redirect("/login")
@@ -47,7 +50,7 @@ router.get("/home",(req,res)=>{
         include:[Blog]
     }).then(userInfo=>{
         const handleBarsData = userInfo.toJSON();
-        console.log(hpsData)
+        console.log(handleBarsData)
         handleBarsData.logged_in=req.session.logged_in
         res.render("home",handleBarsData)
     })

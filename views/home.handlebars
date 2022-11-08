@@ -1,0 +1,18 @@
+<h1>This is my home profile page! Welcome back, {{name}}</h1>
+<h2>My Personal Blogs:</h2>
+{{#each blogs}}
+    <div class="card">
+        <a href="/blog/{{id}}"><h3>{{name}}</h3></a>
+        <p>{{letter}}</p>
+        <button class="delBtn" data-blogId="{{id}}">Delete</button>
+        <hr>
+    </div>
+{{/each}}
+<h2>Add a Blog!</h2>
+<form action="" id="addBlog">
+    <input type="text" name="blogName" id="blogName" placeholder="blogName">
+    <input type="text" name="blogLetter" id="blogLetter" placeholder="blogLetter">
+    <button>Add Blog!</button>
+</form>
+
+<script src="/js/home.js"></script>

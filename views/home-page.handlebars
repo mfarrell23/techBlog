@@ -1,0 +1,9 @@
+<h1>Home Page!</h1>
+<h2>All blogs</h2>
+{{#each blogs}}
+    <div class="card">
+        <a href="/blog/{{id}}"><h3>{{name}}</h3></a>
+        <p>{{letter}}</p>
+        <hr>
+    </div>
+{{/each}}

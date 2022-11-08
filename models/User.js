@@ -8,6 +8,7 @@ class User extends Model {
   }
 }
 
+//TODO: user info types in relation to the database using sequelize
 User.init(
   {
     id: {

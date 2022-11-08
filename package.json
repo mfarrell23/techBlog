@@ -1,0 +1,37 @@
+{
+  "name": "techblog",
+  "version": "1.0.0",
+  "description": "Did you ever just want to blog out your thoughts? Well this project can help you with just that! This tech blog app allows a user to login and create, and delete blogs they post. Maybe you want to vent about your day, or warn another girlfriend of a red flag they saw in a guy. Well you can have it all here in this app! ## Installation",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node seeds/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfarrell23/techBlog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mfarrell23/techBlog/issues"
+  },
+  "homepage": "https://github.com/mfarrell23/techBlog#readme",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "connect-session-sequelize": "^7.0.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.25.5"
+  },
+  "devDependencies": {
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^6.15.0",
+    "prettier": "^2.1.2"
+  }
+}

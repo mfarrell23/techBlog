@@ -1,17 +1,22 @@
 [
     {
-      "name": "",
-      "email": "@gmail.com",
-      "password": ""
+      "name": "Cassandra",
+      "email": "Cass@gmail.com",
+      "password": "pass12345"
     },
     {
-      "name": "",
-      "email": "@gmail.com",
-      "password": ""
+      "name": "Lola-Bunny",
+      "email": "LolaB@gmail.com",
+      "password": "password"
     },
     {
-      "name": "",
-      "email": "@gmail.com",
-      "password": ""
+      "name": "Buggs-Bunny",
+      "email": "Bugs@gmail.com",
+      "password": "password123"
+    },
+    {
+      "name": "Danger Dude",
+      "email": "Danger@gmail.com",
+      "password": "password123"
     }
   ]

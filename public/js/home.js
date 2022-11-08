@@ -1,6 +1,9 @@
 const blogForm = document.querySelector("#addBlog");
+
+// TODO: Using submit button to call the api for blogs
 blogForm.addEventListener("submit",e=>{
     e.preventDefault();
+    console.log('BLOG SUBMIT PREVENTED DEFAULT!')
     const blogObj = {
         name:document.querySelector("#blogName").value,
         letter:document.querySelector("#blogLetter").value,
@@ -12,9 +15,11 @@ blogForm.addEventListener("submit",e=>{
         headers:{
             "Content-Type":"application/json"
         }
-    }).then(res=>{
+    }).then(res, err=>{
         if(res.ok){
-           location.reload()
+            location.reload()
+        }else{
+            console.log("Blog submit error: " + err);
         }
     })
 })

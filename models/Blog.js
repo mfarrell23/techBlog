@@ -3,6 +3,7 @@ const sequelize = require('../config/connection');
 
 class Blog extends Model {}
 
+//TODO: blog info types in relation to the database using sequelize
 Blog.init(
   {
     id: {
@@ -40,4 +41,4 @@ Blog.init(
   }
 );
 
-module.exports = Project;
+module.exports = Blog;
