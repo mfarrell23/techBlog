@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const {Blog} = require('../../models');
+
 //post a blog if logged in
 router.post('/', async (req, res) => {
   if(!req.session.logged_in){
@@ -27,7 +28,7 @@ router.get('/', async (req, res) => {
         console.log(err)
     }
 });
-
+// delete blog by id
 router.delete('/:id', async (req, res) => {
   if(!req.session.logged_in){
     return res.status(401).json()

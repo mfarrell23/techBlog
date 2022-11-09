@@ -8,7 +8,7 @@ class User extends Model {
   }
 }
 
-//TODO: user info types in relation to the database using sequelize
+//user info types in relation to the database using sequelize
 User.init(
   {
     id: {
@@ -38,6 +38,7 @@ User.init(
     },
   },
   {
+    //create hash and encrypt their password
     hooks: {
       beforeCreate: async (newUserInfo) => {
         newUserInfo.password = await bcrypt.hash(newUserInfo.password, 10);

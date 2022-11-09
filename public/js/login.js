@@ -1,9 +1,7 @@
-
-// TODO: Using the submit button to login and call login for selected user
 const loginForm = document.querySelector("#login");
 loginForm.addEventListener("submit",e=>{
     e.preventDefault();
-    console.log('LOGIN SUBMIT PREVENTED DEFAULT!')
+    console.log('PREVENTED DEFAULT!')
     const userObj = {
         email:document.querySelector("#loginEmail").value,
         password:document.querySelector("#loginPassword").value,
@@ -14,11 +12,11 @@ loginForm.addEventListener("submit",e=>{
         headers:{
             "Content-Type":"application/json"
         }
-    }).then(res, err=>{
+    }).then(res=>{
         if(res.ok){
-            location.reload()
-        }else{
-            console.log("login button error: " + err);
+           location.reload()
+        } else {
+            alert("trumpet sound")
         }
     })
 })
