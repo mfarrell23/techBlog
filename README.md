@@ -6,4 +6,8 @@ Did you ever just want to blog out your thoughts? Well this project can help you
 
 ## Resources
 I used the examples of the mini project in class for this week to get a good view and understanding of how to get this project working. I utilized the layout of this example to form my project.
+## Mock up
+![screen shot]()
 ## Contact
+git hub- https://github.com/mfarrell23/techBlog.git
+heroku - 
