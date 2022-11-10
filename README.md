@@ -10,4 +10,4 @@ I used the examples of the mini project in class for this week to get a good vie
 ![screen shot]()
 ## Contact
 git hub- https://github.com/mfarrell23/techBlog.git
-heroku - 
+heroku - https://mbtechblog.herokuapp.com/
